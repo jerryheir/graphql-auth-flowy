@@ -38,9 +38,9 @@ After that, use the following commands:
 
 ```createdb workflowy``` 
 
-(This above command is used to create postgres DB)
+(This above command is used to create a postgres DB)
 
-It will as for password for user, please enter "test" as seen in the ./server/ormconfig.json
+It will ask for password for user, please enter "test" as seen in the ./server/ormconfig.json
 
 ```cd server && yarn install && yarn start```
 
@@ -49,9 +49,9 @@ It will as for password for user, please enter "test" as seen in the ./server/or
 After this, go to ```localhost:3000``` to view the React Application
 You can also see the graphql playground by going to ```http://localhost:4000/graphql```
 
-On the backend, I used Typecript, NodeJS (Express) and apollo-server-express, please ignore every other unused data on the frontend
+On the backend, I used Typecript, NodeJS (Express) and apollo-server-express, please ignore every other unused data on the backend
 
-On the frontend, I used Typescript React, and React-Native-Web (To get display: flex by default, speed and also get some out of the box tools that RN provides easily for us. This also shows my knowledge on building scalable cross platform mobile applications). Sadly I used Redux, for only two things. To persist data on reload, and also to store two keys. (Note: I could have done this with apollo client but my solution would have taken me more time. I apologize for this)
+On the frontend, I used Typescript React, and React-Native-Web (To get display: flex by default, speed and also get some out of the box tools that RN provides easily for us. This also shows my knowledge on building scalable cross platform mobile applications). Sadly I used Redux, for only two things. To persist data on reload, and also to store two keys. (Note: I could have done this with apollo client cache but my solution would have taken me more time. I apologize for this)
 
 ```
 HOME -----
@@ -72,7 +72,8 @@ Q1. In the above task, if you also had to incorporate images/media
 of any kind with each of the tasks on the interface, what would you
 add to your current approach, you can discuss briefly
 
-Answer: On the task interface on the server, there are three important keys;
+Answer: 
+On the task interface on the server, there are three important keys;
 1. id: number, which is the unique identifier of each node
 2. pId: number, this is more like a parent Id that helps us know which node is the parent creator.
 3. Lastly is task: string, which is a string that carries the Task message
@@ -85,4 +86,4 @@ same
 
 Answer: 
 I think for things like "Is menu open or not?" or "User selected this language/country?", it is really overkill to try to do this with apollo. This can be done with redux.
-Majorly to ensure to avoid having duplicate data but at the same time ensure to not over complicate an feature just for the sake of using apollo caching
+Essentially we are trying to ensure we avoid having duplicate data but at the same time ensure we do not over complicate a feature just for the sake of using apollo caching
