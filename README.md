@@ -1,3 +1,32 @@
+## INSTRUCTIONS
+
+Column Full Stack Task
+Workflowy is an easy todo management dashboard with great
+structuring of these todos to incorporate and extend each specific
+tasks into infinite other tasks as required.
+https://www.workflowy.com
+The task is to make a simple workflowy type of an interface using
+React and sort of a backend to support the same using GraphQL
+You can have a look at the website for an exact experience, so
+mainly the idea being creating an interface where the user can add
+to-do tasks, and then in turn each of these tasks can be subdivided
+into more such tasks indefinitely showing them in a chain like
+format and so on for each of these tasks
+The idea is also to create a storage structure and representing the
+same through a React UI, in order to handle the same, a chained tree
+type of structure where each node/task can be further subdivided
+into the same
+You don’t have to pay much attention to the styling details just a
+functional approach executing the same would be good enough, you can
+make this interface as you would like in React and support it
+somewhat either through a NodeJS) approach or any way you would like
+using GraphQL.
+You need not use redux
+Note: It is important to use GraphQL to create queries, mutations
+and subscriptions to update
+You might choose it keep it very simple, but it’s implementation
+will be verified
+
 ## REPLICATING WORKFLOWY
 
 I want to start up first by thanking you the opportunity.
