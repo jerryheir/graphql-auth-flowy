@@ -1,0 +1,3 @@
+export {
+    isAuthUser
+} from './userMiddleware';

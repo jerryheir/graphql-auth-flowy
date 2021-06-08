@@ -1,0 +1,5 @@
+.disable-outline input {
+    outline-width: 0px;
+    outline-color: transparent;
+    outline: none;
+}

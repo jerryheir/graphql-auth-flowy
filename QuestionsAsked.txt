@@ -1,0 +1,24 @@
+## ANSWERS TO THE TWO QUESTIONS
+Q1. In the above task, if you also had to incorporate images/media
+of any kind with each of the tasks on the interface, what would you
+add to your current approach, you can discuss briefly
+
+Answer: 
+On the task interface on the server, there are three important keys;
+1. id: number, which is the unique identifier of each node
+2. pId: number, this is more like a parent Id that helps us know which node is the parent creator.
+3. Lastly is task: string, which is a string that carries the Task message
+For assets like images/audio, we would have to add another key to the interface, maybe called ```asset```. 
+And these can be added at the time of creation by sending the file to s3 bucket or firebase storage, 
+generating a link that will be stored in the asset key, and then this asset is also kept in users gallery (A new part of the schema), 
+and that will make users be able to select old assets so that we don't have to upload to our storage every single time
+
+Q2. If you are using GraphQL and Redux on your front end, how would
+you manage the state for such a use case, since both of them come
+with their own state management libraries. How would you handle the
+same
+
+Answer: 
+I think for things like "Is menu open or not?" or "User selected this language/country?", 
+it is really overkill to try to do this with apollo. This can be done with redux.
+Majorly to ensure to avoid having duplicate data but at the same time ensure to not over complicate an feature just for the sake of using apollo caching
